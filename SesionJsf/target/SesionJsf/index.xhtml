@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+>
+	<h:head>
+		<title><h:outputText value="#{inicioMb.titulo}" /></title>
+	</h:head>
+	
+	<h:body>
+		<h:form id="frmInicioSesion">
+			<h1><h:outputText value="#{inicioMb.titulo}" /></h1>
+			
+			<h:panelGrid id="pgFrmInicioSesion" columns="2">
+				<h:outputLabel id="lblUsuario" value="Usuario" for="txtUsuario" />
+				<h:inputText id="txtUsuario" value="#{inicioMb.nomUsuario}" />
+				
+				<h:outputLabel id="lblClave" value="Clave" for="txtClave" />
+				<h:inputSecret id="txtClave" value="#{inicioMb.claveUsuario}" />
+				
+				<h:commandButton id="btnIniciarSesion" 
+					value="Iniciar sesión"
+					action="#{inicioMb.iniciarSesion()}"
+				/>
+			</h:panelGrid>
+		</h:form>
+	</h:body>
+</html>
