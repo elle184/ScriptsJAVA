@@ -11,8 +11,9 @@ import javax.faces.context.FacesContext;
 import com.soloenbinario.sistema.Sesion;
 
 /**
- * @author lucka
- *
+ * Managed bean al cual es redirigido el usuario cuando inicia su sesión.
+ * 
+ * @author Adrian Francisco Becerra Arias - lucka.dev@gmail.com
  */
 @ManagedBean
 @ViewScoped
