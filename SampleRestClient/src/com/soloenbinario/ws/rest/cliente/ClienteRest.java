@@ -19,7 +19,7 @@ public class ClienteRest {
 
 	public void bienvenidaXml() {
 		try {
-			String resultado = this.cliente.target("http://localhost:8080/RestWebService/rest/rws/bienvenida/xml")
+			String resultado = this.cliente.target("http://localhost:8080/SampleREST-0.0.1-SNAPSHOT/rest/rws/bienvenida/xml")
 			.request(MediaType.APPLICATION_XML).accept(MediaType.APPLICATION_XML).get(String.class);
 
 			System.out.println("Output from Server .... \n");

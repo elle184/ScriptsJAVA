@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="SesionJsf">
-        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+    <wb-module deploy-name="SoapWebService">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="context-root" value="SesionJsf"/>
-        <property name="java-output-path" value="/SesionJsf/build/classes"/>
+        <property name="context-root" value="SoapWebService"/>
+        <property name="java-output-path" value="/SoapWebService/build/classes"/>
     </wb-module>
 </project-modules>

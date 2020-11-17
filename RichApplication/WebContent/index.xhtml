@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:a4j="http://richfaces.org/a4j"
+      xmlns:rich="http://richfaces.org/rich"
+> 
+
+<h:head></h:head> 
+<body> 
+	<h1>#{inicioMb.saludo}</h1>
+
+	<h:form id="form">	
+		<a4j:commandButton id="btnConvertir" 
+			actionListener="#{inicioMb.convertirSaludo}"
+			render="saludo"
+			value="Convertir"
+		/>
+		
+		<a4j:commandButton id="btnMostrarPanel" 
+			actionListener="#{inicioMb.mostrarPanel}"
+			render="pRespuesta"
+			value="Mostrar panel"
+		/>
+		
+		<a4j:commandButton id="btnMostrarOutputPanel" 
+			actionListener="#{inicioMb.mostrarPanel}"
+			render="opRespuesta"
+			value="Mostrar output panel"
+		/>
+		
+		<h:outputText id="saludo" value="#{inicioMb.saludo}" />
+		
+		<rich:panel id="pRespuesta" rendered="#{inicioMb.sePuedeMostrarPanel}">
+			<h:outputText id="saludoDesdeElPanel" value="#{inicioMb.saludoDesdeElPanel}" />
+		</rich:panel>
+		
+		<a4j:outputPanel id="opRespuesta">
+			<h:outputText id="saludoDesdeElOutputPanel" value="#{inicioMb.saludoDesdeElPanel}" />
+			
+			<a4j:commandLink execute="@form" render="detRespuesta" actionListener="#{inicioMb.cargarDetalleRespuesta}">
+				Ver detalle de la respuesta
+			</a4j:commandLink>
+		</a4j:outputPanel>
+		
+		<a4j:outputPanel id="detRespuesta">
+			<h:outputText id="txtDetRespuesta" value="#{inicioMb.textoDetalleRespuesta}" />
+		</a4j:outputPanel>
+	</h:form>
+</body> 
+</html>
